@@ -37,7 +37,6 @@ const DropdownEmployes: React.FC = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        console.log("id", selectedEmploye);
         EmployeService.setEmployeId(selectedEmploye+"");
         router.push('/employes')
     };
@@ -113,6 +112,7 @@ const DropdownEmployes: React.FC = () => {
       return (
         <main style={styles.main}>
           <div style={styles.container}>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <h1 style={styles.title}>Bienvenue dans l'outil de gestion des employés</h1>
             <p style={styles.description}>Veuillez vous connecter pour accéder à votre espace.</p>
             <div style={styles.formGroup}>

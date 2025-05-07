@@ -60,6 +60,7 @@ export default function Home() {
   return (
     <main style={styles.main}>
       <div style={styles.container}>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <h1 style={styles.title}>Bienvenue à l'outil de gestion des employés</h1>
         <p style={styles.description}>
           Choisissez votre rôle pour accéder aux fonctionnalités appropriées.

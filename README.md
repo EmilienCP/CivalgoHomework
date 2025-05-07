@@ -33,6 +33,9 @@ Pour des fins de démo, la fonctionnalité de l'authentification adéquate n'a p
 ### Tests unitaires et tests d'intégration
 Il n'y a pas de tests pour l'instant dans ce prototype. Il faudrait certainement y ajouter des tests unitaires à la fois pour le front end et back end. Des fichiers .spec peuvent être ajoutés pour ce faire. Y ajouter également le script test dans package.json. Des tests d'intégrations peuvent aussi permettre au client d'avoir l'assurance que les fonctionnalités principales soient accessibles et fonctionnelles.
 
+### Système de clean des événements
+Si on laisse le code comme ceci, les événements s'ajouteront jusqu'à ce qu'il n'y ait plus de places dans la mémoire. Il faudrait un moyen de gérer le nombre d'événements passés maximum dans la bd en les deletant automatiquement après une certaine date d'ancienneté, par exemple.
+
 ### Déploiement
 Pour l'instant, le déploiement est uniquement en mode dev. Il faudrait permettre à l'application d'être déployée à autre place que dans une machine personnelle. Pour ce faire, l'utilisation de docker, par exemple, serait une solution. Y ajouter un docker-compose et y ajouter les commandes nécessaire au déploiement dans un mode de production.
 

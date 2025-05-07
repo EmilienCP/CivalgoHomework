@@ -21,7 +21,6 @@ export default function AboutPage() {
 
   const handlePostEmploye = async () => {
     try {
-        console.log('id', employe?.id, 'etat', employe?.etat);
       const res = await fetch('http://localhost:3001/activer', {
         method: 'POST',
         headers: {
@@ -35,10 +34,9 @@ export default function AboutPage() {
 
       if (!res.ok) throw new Error(data.message || 'Erreur API');
 
-      alert('Requête POST envoyée avec succès !');
-    } catch (err: any) {
+      setEmployes({...employe!, etat: !employe?.etat});
+    } catch (err) {
       console.error(err);
-      alert('Erreur lors de l’envoi de la requête POST.');
     }
   };
 
@@ -105,6 +103,7 @@ export default function AboutPage() {
 
   return (
     <main style={styles.main}>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
       <h1 style={styles.title}>Informations de l'employé</h1>
       <h2 style={styles.subtitle}>Nom: {employe?.nom}</h2>
       <h3 style={styles.status}>

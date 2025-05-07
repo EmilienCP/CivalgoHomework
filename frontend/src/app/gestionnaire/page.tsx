@@ -112,6 +112,7 @@ export default function AboutPage() {
           <table style={styles.table}>
             <thead>
               <tr>
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <th style={styles.tableHeader}>Nom de l'employé</th>
                 <th style={styles.tableHeader}>État</th>
                 <th style={styles.tableHeader}>Date</th>
